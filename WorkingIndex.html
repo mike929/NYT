@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NYT Article Search</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div>
+        </div>
+        <div>
+            <h2>New York Times Search</h2>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main class="main-container">
+        <!-- Main Content Container -->
+        <section class="row">
+            <div class="section-header row">
+                <div>
+                    <i class="fas fa-newspaper"></i>
+                    </i>Search Form</div>
+            </div>
+            <div class="row">
+                <!-- form -->
+                <form id="infoSubmit" action="" method="post" enctype="text/plain">
+                    <div id="searchForm" class="row">
+                        <p>Search Term</p>
+                        <input id="searchTerm" type="text" name="search" placeholder="Article" /><br>
+                        <p>Number of Records to Retrieve</p>
+                        <input id="nbrRecords" type="text" name="records" placeholder="1" /><br>
+                        <p>Start Year</p>
+                        <input id="startYear" type="text" name="startYear" placeholder="2017" /><br>
+                        <p>End Year</p>
+                        <input id="endYear" type="text" name="endYear" placeholder="2018" /><br>
+                        <button id="submit" type="submit" value="Submit">Search</button>
+                        <button id="reset" type="reset" value="Clear">Clear</button>
+                    </div>
+                </form>
+                <div class="section-header row">
+                    <div class="col-12">Top Articles</div>
+                    <div id="errorMessage" class="col-12"></div>
+                </div>
+                <article class="articles row">
+                    <!-- Article -->
+                    <div class="articleCard card" data-value="0" data-key="article-id">
+                        <div class="cardHeader articleHeadline">Headline</div>
+                        <div class="cardBody">
+                            <div class="articleSnippet">Snippet</div>
+                            <a class="articleURL" href="">
+                                <img class="articleImage" src="assets/images/defaultArticleImg.png" alt="Article Image"></img>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    </script>
+
+</body>
+
+</html>
