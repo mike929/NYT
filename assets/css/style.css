@@ -2,7 +2,7 @@
  * This css file overrides and adds to the bootstrap stuff
 */
 body {
-    background-image: url("../images/bgimage.jpg");
+    /* background-image: url("../images/bgimage.jpg"); */
     background-repeat: repeat;
     /* background-color: #ffffff; */
 }
@@ -11,11 +11,40 @@ body {
     background-image: url("/assets/images/background.PNG");
 } */
 
+.display-2 {
+    content:"\f1ea";
+    text-align: center;
+}
+
+h6 {
+    color: black !important;
+}
+
 .card-img{
     width: 200px!important;
     height: 250px!important;
     object-fit: cover;
  }
+
+ .arrow-down {
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    
+    border-top: 4px solid black;
+  }
+
+ .arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    
+    border-bottom: 4px solid black;
+  }
+
+
 
 /* fixed footer from overing bottom of content */
 .main-content {
@@ -36,9 +65,9 @@ body {
     color: #777777;
 }
 
-.my-border-top {
+/* .my-border-top {
     border-top: 8px solid #4aaaa5;
-}
+} */
 
 .my-border-bottom-2 {
     border-bottom: 2px solid;
@@ -62,6 +91,10 @@ body {
     background-color: #4aaaa5!important;
     border-color: #E7E7E7!important;
 } */
+
+.container-bottom {
+    text-align: center;
+}
 
 
 @media (min-width: 641px) and (max-width: 768px) {
