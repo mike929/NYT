@@ -23,52 +23,50 @@
     <div class="jumbotron bg-secondary text-white text-white">
       <h1 class="display-2 fa fa-newspaper-o "> New York Times Search</h1>
     </div>
-  </div>
 
-  <div class="container main-content">
-    <div class="row">
-      <div class="col-md-12 bg-white border my-border-secondary m-2 my-sm-4 cardbody">
-        <div class="page-header my-bg-reverse pt-2">
-          <h6><i class="fa fa-keyboard-o"></i> Search Parameters</h6>
-          <hr>
+    <div class="container main-content">
+      <div class="row">
+        <div class="col-md-12 bg-white border my-border-secondary m-2 my-sm-4 cardbody">
+          <div class="page-header my-bg-reverse pt-2">
+            <h6><i class="fa fa-keyboard-o"></i> Search Parameters</h6>
+            <hr>
+          </div>
+
+          <div class="mx-auto">
+            <form class="form-group" role="form-group">
+              <label for="Search" class="mb-2 mr-sm-2">Search Term:</label>
+              <input type="text" class="form-control mb-2 mr-sm-2" id="searchTerm" placeholder="search">
+              <label for="Search" class="mb-2 mr-sm-2">Number of Records to Retrieve:</label>
+              <input type="text" class="form-control mb-2 mr-sm-2 custom-select" id="nbrRecords" placeholder="retrieved">
+              <label for="Search" class="mb-2 mr-sm-2">Start Year (Optional):</label>
+              <input type="text" class="form-control mb-2 mr-sm-2" id="startYear" placeholder="start year">
+              <label for="Search" class="mb-2 mr-sm-2">End Year (Optional):</label>
+              <input type="text" class="form-control mb-2 mr-sm-2" id="endYear" placeholder="end year">
+
+              <button id="submit" type="submit" class="btn btn-primary mb-2">Search</button>
+              <button id="reset" type="reset" class="btn btn-primary mb-2">Clear Results</button>
+
+            </form>
+          </div>
         </div>
-
-        <div class="mx-auto">
-          <form class="form-group" role="form-group">
-            <label for="Search" class="mb-2 mr-sm-2">Search Term:</label>
-            <input type="text" class="form-control mb-2 mr-sm-2" id="searchTerm" placeholder="search">
-            <label for="Search" class="mb-2 mr-sm-2">Number of Records to Retrieve:</label>
-            <input type="text" class="form-control mb-2 mr-sm-2" id="nbrRecords" placeholder="retrieved"><div class="arrow-down arrow-down"></div>
-            <label for="Search" class="mb-2 mr-sm-2">Start Year (Optional):</label>
-            <input type="text" class="form-control mb-2 mr-sm-2" id="startYear" placeholder="start year">
-            <label for="Search" class="mb-2 mr-sm-2">End Year (Optional):</label>
-            <input type="text" class="form-control mb-2 mr-sm-2" id="endYear" placeholder="end year">
-
-            <button id="submit" type="submit" class="btn btn-primary mb-2">Search</button>
-            <button id="reset" type="reset" class="btn btn-primary mb-2">Clear Results</button>
-
-          </form>
-        </div>
-
-<div class="arrow-up">
-  <p>dfedfefefef</p>
-</div>
 
       </div>
     </div>
     <div class="container">
-        <div class="panel panel-default">
-          <div class="panel-heading bg-white fa fa-table"><b> Top Articles</b></div>
-          <div class="panel-body articles"></div>
-        </div>
+      <div class="panel panel-default">
+        <div class="panel-heading bg-white fa fa-table"><b> Top Articles</b></div>
+        <div class="panel-body articles"></div>
       </div>
+    </div>
+  </div>
   </div>
 
 
 
+  <div class="container-bottom">
+
   <footer class="footer">
-    <nav class="navbar navbar-expand navbar-dark bg-secondary text-white fixed-bottom my-border-top">
-      <div class="container justify-content-center">
+    <!-- <nav class="navbar navbar-expand navbar-dark bg-secondary text-white fixed-bottom my-border-top"> -->
         <span class="mb-1">Made With Lots of <i class="fa fa-heart"></i></span>
       </div>
     </nav>

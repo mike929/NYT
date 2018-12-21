@@ -65,9 +65,9 @@ h6 {
     color: #777777;
 }
 
-.my-border-top {
+/* .my-border-top {
     border-top: 8px solid #4aaaa5;
-}
+} */
 
 .my-border-bottom-2 {
     border-bottom: 2px solid;
@@ -91,6 +91,10 @@ h6 {
     background-color: #4aaaa5!important;
     border-color: #E7E7E7!important;
 } */
+
+.container-bottom {
+    text-align: center;
+}
 
 
 @media (min-width: 641px) and (max-width: 768px) {
