@@ -57,25 +57,18 @@ function searchArticles(searchTerm, nbrRecords, startYear, endYear) {
     console.log(`Request: ${requestURL}`);
 
     // I had to use the JSONP method since the one used in class caused CORS issues
-    // $.ajax({
-    //     url: requestURL,
-    //     method: 'GET',
-    //     dataType: 'JSON',
-    //     success: function (result) {
-    //         console.log(result);
-    //         articleRender(result.response.docs, nbrRecords);
-    //     },
-    //     error: function (err) {
-    //         console.log('error:' + err);
-    //         errorRender(err);
-    //     }
-    // });
     $.ajax({
         url: requestURL,
         method: 'GET',
-    }).then (function (result) {
+        dataType: 'JSON',
+        success: function (result) {
             console.log(result);
             articleRender(result.response.docs, nbrRecords);
+        },
+        error: function (err) {
+            console.log('error:' + err);
+            errorRender(err);
+        }
     });
 }
 
@@ -88,13 +81,47 @@ function articleRender(articles, nbrRecords) {
     console.log(articles);
 
     for (let articleNbr = 0; articleNbr < articles.length && articleNbr < nbrRecords; articleNbr += 1) {
-        let newCard = cardRender(articles[articleNbr]);
+        // let newCard = cardRender(articles[articleNbr]);
+        let newPanel = panelRender(articles[articleNbr]);
 
-        $(".articles").append(newCard);
+        $(".articles").append(newPanel);
     }
 }
 
-// ewjrhqwjor
+// Render a panel for the article
+function panelRender(article) {
+    let panelDiv = "";
+    let imageURL = "assets/images/defaultArticleImg.png";
+    let caption = "Article Image";
+
+    if (article.multimedia.length > 0) {
+        // change to article image if there is one (in multimedia array)
+        imageURL = `https://www.nytimes.com/${article.multimedia[0].url}`;
+        if (article.multimedia[0].url != null) {
+            caption = article.multimedia[0].url;
+        }
+    }
+
+//     <div class="container">
+//     <div class="panel panel-default">
+//       <div class="panel-heading bg-dark text-white">Panel Heading</div>
+//       <div class="panel-body articles">Panel Content</div>
+//     </div>
+//   </div>
+
+    panelDiv += `<a class="articleURL" href="${article.web_url}">`;
+    panelDiv += `<div class="panel-heading bg-dark text-white">${article.headline.main}</div>`;
+    panelDiv += `<div class="panel-body">`;
+    panelDiv += `<div class="articleSnippet">${article.snippet}</div>`;
+    panelDiv += `<div><a class="urlName articleURL" href="${article.web_url}">${article.headline.main}</a></div>`;
+    panelDiv += `</div>`;
+    panelDiv += ` </a>`;
+
+
+    return panelDiv;
+}
+
+// render a card for the article
 function cardRender(article) {
     let cardDiv = "";
     let imageURL = "assets/images/defaultArticleImg.png";
