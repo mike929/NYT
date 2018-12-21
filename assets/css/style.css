@@ -26,6 +26,26 @@ h6 {
     object-fit: cover;
  }
 
+ .arrow-down {
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    
+    border-top: 4px solid black;
+  }
+
+ .arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    
+    border-bottom: 4px solid black;
+  }
+
+
+
 /* fixed footer from overing bottom of content */
 .main-content {
     margin-bottom: 70px;
