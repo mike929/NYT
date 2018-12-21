@@ -2,7 +2,7 @@
  * This css file overrides and adds to the bootstrap stuff
 */
 body {
-    background-image: url("../images/bgimage.jpg");
+    /* background-image: url("../images/bgimage.jpg"); */
     background-repeat: repeat;
     /* background-color: #ffffff; */
 }
@@ -10,6 +10,11 @@ body {
 /* #bg {
     background-image: url("/assets/images/background.PNG");
 } */
+
+.display-2 {
+    content:"\f1ea";
+    text-align: center;
+}
 
 .card-img{
     width: 200px!important;
