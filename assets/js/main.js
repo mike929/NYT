@@ -57,18 +57,25 @@ function searchArticles(searchTerm, nbrRecords, startYear, endYear) {
     console.log(`Request: ${requestURL}`);
 
     // I had to use the JSONP method since the one used in class caused CORS issues
+    // $.ajax({
+    //     url: requestURL,
+    //     method: 'GET',
+    //     dataType: 'JSON',
+    //     success: function (result) {
+    //         console.log(result);
+    //         articleRender(result.response.docs, nbrRecords);
+    //     },
+    //     error: function (err) {
+    //         console.log('error:' + err);
+    //         errorRender(err);
+    //     }
+    // });
     $.ajax({
         url: requestURL,
         method: 'GET',
-        dataType: 'JSON',
-        success: function (result) {
+    }).then (function (result) {
             console.log(result);
             articleRender(result.response.docs, nbrRecords);
-        },
-        error: function (err) {
-            console.log('error:' + err);
-            errorRender(err);
-        }
     });
 }
 
