@@ -2,7 +2,7 @@
  * This css file overrides and adds to the bootstrap stuff
 */
 body {
-    background-image: url("../images/background.PNG");
+    background-image: url("../images/bgimage.jpg");
     background-repeat: repeat;
     /* background-color: #ffffff; */
 }
