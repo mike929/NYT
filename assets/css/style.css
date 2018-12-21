@@ -1,0 +1,77 @@
+/*
+ * This css file overrides and adds to the bootstrap stuff
+*/
+body {
+    background-image: url("../images/background.PNG");
+    background-repeat: repeat;
+    /* background-color: #ffffff; */
+}
+
+/* #bg {
+    background-image: url("/assets/images/background.PNG");
+} */
+
+.card-img{
+    width: 200px!important;
+    height: 250px!important;
+    object-fit: cover;
+ }
+
+/* fixed footer from overing bottom of content */
+.main-content {
+    margin-bottom: 70px;
+}
+
+.my-bg-primary {
+    background-color: #4aaaa5;
+    color: #ffffff;
+}
+
+.my-bg-reverse {
+    background-color: #ffffff;
+    color: #4aaaa5;
+}
+
+.my-text-primary {
+    color: #777777;
+}
+
+.my-border-top {
+    border-top: 8px solid #4aaaa5;
+}
+
+.my-border-bottom-2 {
+    border-bottom: 2px solid;
+}
+
+.my-border-secondary {
+    border-color: #dddddd;
+}
+
+/* override bootstrap colors and fonts */
+.btn-primary {
+    background-color: #4aaaa5;
+    border-color: #4aaaa5;
+}
+
+.navbar-custom {
+    background-color: #4aaaa5;
+}
+  
+/* .navbar-default {
+    background-color: #4aaaa5!important;
+    border-color: #E7E7E7!important;
+} */
+
+
+@media (min-width: 641px) and (max-width: 768px) {
+    .form-group {
+        width: 200px;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 640px ) {
+    .form-group {
+        width: 300px;
+    }
+}
